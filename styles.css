@@ -31,16 +31,6 @@ body {
     align-items: center;
 }
 
-@media (max-width: 660px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-
-    .title-card {
-        display: none;
-    }
-}
-
 .card {
     width: var(--card-size);
     height: var(--card-size);
@@ -142,4 +132,15 @@ body {
 
 .links-card a:hover i {
     transform: scale(1.15);
+}
+
+/* Mobile responsive overrides (placed at end of stylesheet to take precedence) */
+@media (max-width: 660px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .title-card {
+        display: none !important;
+    }
 }
